@@ -1,0 +1,113 @@
+/*
+INFO/CS 1300 Final Project
+Applefest Website
+Aliza Cohen (agc66), Jenice Xiao (jx223), Katherine Tang (kat86)
+CSS for AppleFest Website
+*/
+
+/****************************/
+/*resets and global styling */
+/****************************/
+
+html, body {
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: Ovo, serif;
+    font-size: 0.9em;
+}
+
+h1, h2 {
+    font-family: Muli, sans-serif;
+}
+
+/****************************/
+/* styling by section       */
+/****************************/
+
+#top_nav {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: Muli, sans-serif;
+    font-size: 1.25em;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+}
+
+#top_nav > span:first-child {
+    margin-left: 1.5em;
+}
+
+#top_nav > span {
+    margin-right: 1em;
+}
+
+#top {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+}
+
+#top > img {
+    width: 100%;
+}
+
+#container {
+    /* border: solid 1px red; */
+    margin: 0 auto;
+    max-width: 1300px;
+}
+
+#content {
+    /* border: solid 1px #dedede; */
+    background-color: #ffffff;
+    float: left;
+    margin-top: 2em;
+    /* margin-right: auto; */
+    margin-left: 2.5em;
+    padding: 0.5em; 
+}
+
+/****************************/
+/* media queries            */
+/****************************/
+
+@media screen and (max-width: 1200px) {
+    #content {
+        width: 94%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #top > img {
+        max-width: 900px;
+    }
+    
+    #content {
+        max-width: 85%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #top_nav > span:first-child {
+        margin-left: 0em;
+    }
+    
+    #top > img {
+        display: none;
+    }
+}
