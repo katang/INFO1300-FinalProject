@@ -12,6 +12,7 @@ CSS for AppleFest Website
 html, body {
     border: 0;
     font: inherit;
+    color: white;
     font-size: 100%;
     margin: 0;
     padding: 0;
@@ -19,13 +20,12 @@ html, body {
 }
 
 body {
-    background-color: #ffffff;
-    font-family: Ovo, serif;
+    font-family: Candara, sans-serif;
     font-size: 0.9em;
 }
 
 h1, h2 {
-    font-family: Muli, sans-serif;
+    font-family: Candara, sans-serif;
 }
 
 /****************************/
@@ -33,15 +33,13 @@ h1, h2 {
 /****************************/
 
 #top_nav {
-    background-color: #ffffff;
-    color: #000000;
-    font-family: Muli, sans-serif;
+    background-color: crimson;
+    color: white;
     font-size: 1.25em;
     margin-right: auto;
     margin-left: auto;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    padding-left: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
     text-align: center;
     position: fixed;
     top: 0px;
@@ -54,33 +52,86 @@ h1, h2 {
 }
 
 #top_nav > span {
-    margin-right: 1em;
+    margin-right: 3em;
 }
 
-#top {
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
+#bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
 }
 
-#top > img {
-    width: 100%;
+#bg img {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#center {
+    background: rgba(255, 255, 255, .2);
+    position: absolute;
+    margin-left: 5em;
+    margin-right: 5em;
+    padding-top: 4em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
 }
 
 #container {
-    /* border: solid 1px red; */
-    margin: 0 auto;
     max-width: 1300px;
+    padding: 2em;
 }
 
 #content {
-    /* border: solid 1px #dedede; */
-    background-color: #ffffff;
+    padding: 1.5em;
+    text-align: center;
+}
+
+#pics {
+    background: rgba(0, 0, 0, .5);
+    border: 2px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 640px;
+    max-height: 427px;
+}
+
+#button_div {
+    background: rgba(0, 0, 0, 0);
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 14%;
+}
+
+button {
+    padding: 0.5em;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+#container > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2em;
+}
+
+#box {
+    background: rgba(0, 0, 0, .5);
+    border: 2px solid white;
+    position: relative;
     float: left;
-    margin-top: 2em;
-    /* margin-right: auto; */
-    margin-left: 2.5em;
-    padding: 0.5em; 
+    height: 200px;
+    width: 300px;
+    margin: 25px;
+    margin-top: 50px;
 }
 
 /****************************/
@@ -94,7 +145,7 @@ h1, h2 {
 }
 
 @media screen and (max-width: 768px) {
-    #top > img {
+    #container > img {
         max-width: 900px;
     }
     
@@ -108,7 +159,7 @@ h1, h2 {
         margin-left: 0em;
     }
     
-    #top > img {
+    #container > img {
         display: none;
     }
 }
