@@ -1,4 +1,3 @@
 # INFO1300-FinalProject
 
-Slideshow does not work yet
-Isn't responsive to display size yet
+Slideshow doesn't work yet, isn't responsive to different screen sizes yet
