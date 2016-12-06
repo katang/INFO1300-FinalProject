@@ -1,0 +1,192 @@
+/*
+INFO/CS 1300 Final Project
+Applefest Website
+Aliza Cohen (agc66), Jenice Xiao (jx223), Katherine Tang (kat86)
+CSS for AppleFest Website
+*/
+
+/****************************/
+/*resets and global styling */
+/****************************/
+
+html, body {
+    font-family: Candara, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: Candara, sans-serif;
+    text-align: center;
+}
+
+ul {
+    background-color: crimson;
+    list-style-type: none;
+    padding: 15px;
+    margin: 0;
+    text-align: center;
+}
+
+li {
+    color: white;
+    display: inline;
+    padding: 60px;
+}
+
+/****************************/
+/* styling by section       */
+/****************************/
+
+.top_nav {
+    background-color: crimson;
+    color: white;
+    font-size: 1.25em;
+    margin-right: auto;
+    margin-left: auto;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+}
+
+#bg {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+}
+
+#bg img {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    margin: auto; 
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#center {
+    background: rgba(255, 255, 255, .2);
+    position: absolute;
+    margin-left: 8em;
+    margin-right: 8em;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+@keyframes fade {
+    0%   { opacity: 0; }
+    11.11%   { opacity: 1; }
+    33.33%  { opacity: 1; }
+    44.44%  { opacity: 0; }
+    100%  { opacity: 0; }
+}
+
+.slideshow { 
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 640px; 
+    height: 426px;
+    background-size: contain;
+}
+
+.slideshow img { 
+    opacity: 0; 
+    animation-name: fade; 
+    animation-duration: 9s; 
+    animation-iteration-count: infinite; 
+    position: absolute;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0; 
+    right: 0;
+}
+
+.slideshow img:nth-child(1) {animation-delay: 0s; }
+.slideshow img:nth-child(2) { animation-delay: 3s; }
+.slideshow img:nth-child(3) { animation-delay: 6s; }
+
+#container {
+    background: rgba(255, 255, 255, .5);
+    position: relative;
+    margin-left: 1em;
+}
+
+.box {
+    background: rgba(0, 0, 0, .5);
+    border: 2px solid white;
+    position: relative;
+    float: left;
+    height: 200px;
+    width: 300px;
+    margin: 16px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.content {
+    padding: 1em;
+    text-align: center;
+}
+
+.map img {
+    position: relative;
+    margin-left: 5em;
+    width: 85%;
+    height: 85%;
+}
+
+/****************************/
+/* media queries            */
+/****************************/
+
+@media screen and (max-width: 1200px) {
+    .top_nav {
+        position: fixed;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .top_nav {
+        position: fixed;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .top_nav {
+        position: fixed;
+    }
+    
+    .slideshow {
+        display: none;
+    }
+    
+    .map {
+        display: none;
+    }
+    
+    ul {
+        background-color: crimson;
+    }
+    
+    li {
+        color: white;
+        text-align: center;
+        border-bottom: 1px solid black;
+        display: block;
+        padding: 10px;
+    }
+}
