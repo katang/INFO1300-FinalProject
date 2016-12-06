@@ -10,82 +10,53 @@ CSS for AppleFest Website
 /****************************/
 
 html, body {
-    font-family: Candara, sans-serif;
+    background-color: black;
     color: white;
-    margin: 0;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
     padding: 0;
+    margin: 0;
     max-width: 100%;
-    overflow-x: hidden;
-}
-
-h1 {
-    font-family: Candara, sans-serif;
-    text-align: center;
 }
 
 ul {
     background-color: crimson;
     list-style-type: none;
-    padding: 15px;
+    padding: 2px;
     margin: 0;
     text-align: center;
+    overflow: hidden; 
 }
 
-li {
+li a {
+    display: inline-block;
     color: white;
-    display: inline;
-    padding: 60px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: orangered;
+}
+
+h1 {
+    text-align: center;
 }
 
 /****************************/
 /* styling by section       */
 /****************************/
 
-.top_nav {
-    background-color: crimson;
-    color: white;
-    font-size: 1.25em;
-    margin-right: auto;
-    margin-left: auto;
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    z-index: 1;
-}
-
-#bg {
-    position: fixed;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-}
-
-#bg img {
-    position: absolute;
-    top: 0; 
-    left: 0; 
-    right: 0; 
-    bottom: 0; 
-    margin: auto; 
-    max-width: 100%;
-    max-height: 100%;
-}
-
 #center {
     background: rgba(255, 255, 255, .2);
-    position: absolute;
-    margin-left: 8em;
-    margin-right: 8em;
-    padding-top: 4em;
-    padding-bottom: 4em;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
+    padding: 20px;
+    margin: auto;
+    width: 70%;
 }
 
 @keyframes fade {
-    0%   { opacity: 0; }
-    11.11%   { opacity: 1; }
+    0%  { opacity: 0; }
+    11.11%  { opacity: 1; }
     33.33%  { opacity: 1; }
     44.44%  { opacity: 0; }
     100%  { opacity: 0; }
@@ -97,7 +68,6 @@ li {
     margin-right: auto;
     width: 640px; 
     height: 426px;
-    background-size: contain;
 }
 
 .slideshow img { 
@@ -113,26 +83,25 @@ li {
     right: 0;
 }
 
-.slideshow img:nth-child(1) {animation-delay: 0s; }
+.slideshow img:nth-child(1) { animation-delay: 0s; }
 .slideshow img:nth-child(2) { animation-delay: 3s; }
 .slideshow img:nth-child(3) { animation-delay: 6s; }
 
 #container {
-    background: rgba(255, 255, 255, .5);
-    position: relative;
-    margin-left: 1em;
+    background: rgba(255, 255, 255, .7);
+    padding: 5px;
+    margin: auto;
+    margin-top: 50px;
+    width: 90%;
 }
 
 .box {
     background: rgba(0, 0, 0, .5);
     border: 2px solid white;
+    height: auto;
+    width: auto;
     position: relative;
     float: left;
-    height: 200px;
-    width: 300px;
-    margin: 16px;
-    margin-top: 50px;
-    margin-bottom: 50px;
 }
 
 .content {
@@ -141,10 +110,9 @@ li {
 }
 
 .map img {
-    position: relative;
-    margin-left: 5em;
+    display: block;
+    margin: auto;
     width: 85%;
-    height: 85%;
 }
 
 /****************************/
@@ -156,6 +124,10 @@ li {
         position: fixed;
         width: 100%;
     }
+    
+    li {
+        float: left;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -163,30 +135,37 @@ li {
         position: fixed;
         width: 100%;
     }
+    
+    li {
+        float: left;
+    }
+    
+    p {
+        font-size: 1.25em;
+    }
 }
 
 @media screen and (max-width: 480px) {
     .top_nav {
-        position: fixed;
+        position: static;
+    }
+    
+    p {
+        font-size: 1.25em;
     }
     
     .slideshow {
         display: none;
     }
     
-    .map {
-        display: none;
-    }
-    
     ul {
         background-color: crimson;
     }
-    
+
     li {
         color: white;
         text-align: center;
         border-bottom: 1px solid black;
         display: block;
-        padding: 10px;
-    }
+        padding: 5px;
 }
