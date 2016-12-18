@@ -1,1 +1,234 @@
+/*
+INFO/CS 1300 Final Project
+Applefest Website
+Aliza Cohen (agc66), Jenice Xiao (jx223), Katherine Tang (kat86)
+CSS for AppleFest Website
+*/
 
+/****************************/
+/*resets and global styling */
+/****************************/
+
+html, body {
+    color: white;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+body {
+    background-image: url("../images/apples.jpg");
+    /* original image from https://www.flickr.com/photos/106103661@N02/10397073603/in/album-72157648008079417/ , edited by Katherine */
+    background-repeat: repeat;
+}
+
+ul {
+    background-color: crimson;
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+li {
+    display: inline;
+    padding: 60px;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: orangered;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: crimson;
+  color: white;
+  display: block;
+  font-size: 10px;
+  margin: 10px auto 0 auto;
+  padding: 5px 0;
+  text-align: center;
+  width: 100%;
+}
+
+/****************************/
+/* styling by section       */
+/****************************/
+
+#center {
+    background: rgba(255, 255, 255, .2);
+    padding: 20px;
+    margin: auto;
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+}
+
+@keyframes fade {
+    0%  { opacity: 0; }
+    11.11%  { opacity: 1; }
+    33.33%  { opacity: 1; }
+    44.44%  { opacity: 0; }
+    100%  { opacity: 0; }
+}
+
+.slideshow { 
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 640px; 
+    height: 426px;
+}
+
+.slideshow img { 
+    opacity: 0; 
+    animation-name: fade; 
+    animation-duration: 12s; 
+    animation-iteration-count: infinite; 
+    position: absolute;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0; 
+    right: 0;
+}
+
+.slideshow img:nth-child(1) { animation-delay: 0s; }
+.slideshow img:nth-child(2) { animation-delay: 3s; }
+.slideshow img:nth-child(3) { animation-delay: 6s; }
+.slideshow img:nth-child(4) { animation-delay: 9s; }
+
+.divider {
+    background: rgba(255, 255, 255, .7);
+    padding: 5px;
+    margin: auto;
+    margin-top: 50px;
+    width: 90%;
+    position: center;
+    overflow: hidden;
+}
+
+#box_container {
+    padding: 5px;
+    margin: auto;
+    width: 90%;
+    position: center;
+}
+
+#box_container p {
+    font-size: 90%;
+    padding: 5px;
+    text-decoration: none;
+}
+
+#content {
+    position: center;
+}
+
+#first {
+    background: rgba(0, 0, 0, .5);
+    border: 2px solid white;
+    height: 200px;
+    width: 220px;
+    position: center;
+    float: left;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 20px;
+}
+
+#second {
+    background: rgba(0, 0, 0, .5);
+    border: 2px solid white;
+    height: 200px;
+    width: 220px;
+    position: center;
+    float: left;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 20px;
+}
+
+#third {
+    background: rgba(0, 0, 0, .5);
+    border: 2px solid white;
+    height: 200px;
+    width: 220px;
+    position: center;
+    float: left;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 20px;
+}
+
+.content {
+    padding: 1em;
+    text-align: center;
+}
+
+img.games {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+/****************************/
+/* media queries            */
+/****************************/
+
+/* Mobile stylings (portrait only) */
+@media screen and (max-width: 480px) {
+    
+    .slideshow {
+        display: none;
+    }
+    
+    ul {
+        background-color: crimson;
+        padding: 10px;
+    }
+
+    li {
+        color: white;
+        text-align: center;
+        border-bottom: 1px solid white;
+        display: block;
+        padding: 10px;
+    }
+    
+    #first {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin: 0px;
+        margin-bottom: 5px;
+    }
+    
+    #second {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin: 0px;
+        margin-bottom: 5px;
+    }
+    
+    #third {
+        padding-left: 0px;
+        padding-right: 0px;
+        margin: 0px;
+        margin-bottom: 5px;
+    }
+}
