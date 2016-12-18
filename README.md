@@ -1,3 +1,3 @@
 # INFO1300-FinalProject
 
-Slideshow doesn't work yet, isn't responsive to different screen sizes yet
+Family website for Ithaca Apple Harvest Festival
